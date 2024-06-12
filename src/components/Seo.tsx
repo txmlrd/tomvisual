@@ -4,9 +4,9 @@ import { useRouter } from 'next/router';
 import { openGraph } from '@/lib/helper';
 
 const defaultMeta = {
-  title: 'Aether Design System',
-  siteName: 'Aether Design System',
-  description: 'Design system used on projects',
+  title: 'Tom Visual',
+  siteName: 'Tom Visual',
+  description: 'Personal Portfolio of Tom Visual',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
   url: 'https://aether.thcl.dev',
   type: 'website',
@@ -103,5 +103,5 @@ const favicons: Array<React.ComponentPropsWithoutRef<'link'>> = [
     href: '/favicon/safari-pinned-tab.svg',
     color: '#00e887',
   },
-  { rel: 'shortcut icon', href: '/favicon/favicon.ico' },
+  { rel: 'shortcut icon', href: '/favicon/tomvisuallogo.ico' },
 ];

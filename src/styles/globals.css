@@ -27,6 +27,27 @@
   /* #endregion  /**======== Primary Color =========== */
 }
 
+.debug {
+  border: 2px solid red;
+}
+.debug2 {
+  border: 2px solid green;
+}
+.debug3 {
+  border: 2px solid blue;
+}
+.debug4 {
+  border: 2px solid purple;
+}
+.debug5 {
+  border: 2px solid yellow;
+}
+
+.custom-rounded-navbar {
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
 @layer base {
   /* #region  /**=========== Fonts =========== */
   @font-face {

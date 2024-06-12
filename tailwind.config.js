@@ -1,5 +1,10 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { fontFamily } = require('tailwindcss/defaultTheme');
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -9,8 +14,24 @@ module.exports = {
       fontFamily: {
         primary: ['Inter', ...fontFamily.sans],
         averta: ['AvertaStd', ...fontFamily.sans],
+        poppins: ['Poppins', ...fontFamily.sans],
+      },
+      fontWeight: {
+        light: 300,
+        normal: 400,
+        medium: 500,
+        semibold: 600,
+        bold: 700,
+        extrabold: 800,
+        black: 900,
       },
       colors: {
+        warna: {
+          hijaulebihmuda: '#CFEE9E',
+          hijaumuda: '#8DAB7F',
+          hijautua: '#394032',
+          orange: '#EFAF35',
+        },
         primary: {
           50: 'rgb(var(--tw-color-primary-50) / <alpha-value>)',
           //* Background
@@ -88,5 +109,16 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/container-queries'),
     require('tailwindcss-animate'),
+    addVariablesForColors,
   ],
+  
 };
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+  addBase({
+    ":root": newVars,
+  });
+}

@@ -26,7 +26,8 @@
     "@tanstack/react-table": "^8.11.2",
     "auto-zustand-selectors-hook": "^2.0.0",
     "axios": "1.6.3",
-    "clsx": "^2.0.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.2.10",
     "immer": "^9.0.21",
     "lodash.get": "^4.4.2",
     "lucide-react": "^0.294.0",
@@ -44,7 +45,7 @@
     "react-slick": "^0.29.0",
     "react-wrap-balancer": "^1.1.0",
     "slick-carousel": "^1.8.1",
-    "tailwind-merge": "^2.2.0",
+    "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "zustand": "^4.4.7"
   },
