@@ -178,9 +178,25 @@
   .min-h-main {
     @apply min-h-[calc(100vh-56px)];
   }
+  .swiper {
+    height: 100%;
+    width: 100%;
+  }
+
+  .swiper .swiper-pagination-bullet-active {
+    transform: scale(2);
+    transform-origin: center;
+  }
 }
 
 @layer utilities {
+  .scale-up {
+    transition: transform 0.3s ease-in-out; /* Adjust the timing as needed */
+    transform: scale(1.1); /* Adjust the scale factor as needed */
+  }
+  .animation-pause {
+    animation-play-state: paused;
+  }
   .animated-underline {
     background-image: linear-gradient(#33333300, #33333300),
       linear-gradient(

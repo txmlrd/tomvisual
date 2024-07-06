@@ -24,6 +24,10 @@ export default function Document() {
             crossOrigin='anonymous'
           />
         ))}
+        <link
+          href='https://fonts.googleapis.com/css2?family=Poly&display=swap'
+          rel='stylesheet'
+        />
       </Head>
       <body>
         <Main />

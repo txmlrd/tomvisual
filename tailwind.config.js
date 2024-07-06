@@ -11,13 +11,18 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      boxShadow: {
+        'custom-default': '0 0 20px rgba(0, 128, 0, 0.5), 0 0 40px rgba(0, 128, 0, 0.3), 0 0 60px rgba(0, 128, 0, 0.2)',
+        'custom-hover': '0 0 30px rgba(0, 128, 0, 0.7), 0 0 60px rgba(0, 128, 0, 0.5), 0 0 90px rgba(0, 128, 0, 0.3)',
+      },
       fontFamily: {
         primary: ['Inter', ...fontFamily.sans],
         averta: ['AvertaStd', ...fontFamily.sans],
         poppins: ['Poppins', ...fontFamily.sans],
+        poly: ['Poly', ...fontFamily.sans],
       },
       fontWeight: {
-        light: 300,
+        light: 350,
         normal: 400,
         medium: 500,
         semibold: 600,
@@ -28,8 +33,10 @@ module.exports = {
       colors: {
         warna: {
           hijaulebihmuda: '#CFEE9E',
-          hijaumuda: '#8DAB7F',
-          hijautua: '#394032',
+          hijaudesc: '#8DAB7F',
+          hijaumuda: '#1F3116',
+          hijautua: '#081B0A',
+          hijausedang: '#182B12',
           orange: '#EFAF35',
         },
         primary: {
@@ -78,6 +85,14 @@ module.exports = {
         light: '#F5F5F5',
       },
       keyframes: {
+        blink: {
+          '0%, 50%, 100%': { opacity: 1 },
+          '25%, 75%': { opacity: 0 },
+        },
+        "move-right": {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(5px)' },
+        },
         flicker: {
           '0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100%': {
             opacity: 0.99,
@@ -98,7 +113,9 @@ module.exports = {
           },
         },
       },
-      animation: {
+      animation: {  
+        blink: 'blink 2s infinite', 
+        'move-right': 'move-right 0.3s ease-in-out forwards',    
         flicker: 'flicker 3s linear infinite',
         shimmer: 'shimmer 1.3s linear infinite',
       },

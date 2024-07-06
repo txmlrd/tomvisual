@@ -1,0 +1,233 @@
+[
+  {
+    "image": {
+      "src": "/images/project/starter.png",
+      "alt": "Tom Visual"
+    },
+    "link": "https://starteracademy.id/",
+    "title": "Starter Academy",
+    "subtitle": "Technology Project • 2023",
+    "description": "Online Course website developing in Next.js and Tailwind CSS",
+    "logos": [
+      {
+        "src": "/svg/logoapp/next.svg",
+        "alt": "Next.js Logo"
+      },
+      {
+        "src": "/svg/logoapp/tailwind.svg",
+        "alt": "Tailwind CSS Logo"
+      }
+    ]
+  },
+  {
+    "image": {
+      "src": "/images/project/handsign.png",
+      "alt": "handsign"
+    },
+    "link": "https://www.canva.com/design/DAGKJU1g2ho/znZYi2BgN_V7eFci3Yd85g/edit?utm_content=DAGKJU1g2ho&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+    "title": "IOT Hand Sign Language",
+    "subtitle": "Technology Project • 2022",
+    "description": "A college task where i make a hand sign language translator using IOT and Machine Learning",
+    "logos": []
+  },
+  {
+    "image": {
+      "src": "/images/project/anandaindah.jpg",
+      "alt": "anandaindah"
+    },
+    "link": "https://www.instagram.com/p/C53WATFPFZf/ ",
+    "title": "Ananda & Indah Prewedding Video",
+    "subtitle": "Visual Project • 2023",
+    "description": "Ananda and Indah Prewedding",
+    "logos": [
+      {
+        "src": "/svg/logoapp/premierepro.svg",
+        "alt": "premiere pro Logo"
+      },
+      {
+        "src": "/svg/logoapp/capcut.svg",
+        "alt": "capcut Logo"
+      }
+    ]
+  },
+  {
+    "image": {
+      "src": "/images/project/inbengkel.png",
+      "alt": "anandaindah"
+    },
+    "link": "",
+    "title": "InBengkel Company Profile Video",
+    "subtitle": "Visual Project • 2024",
+    "description": "A 2024 project making InBengkel company profile video",
+    "logos": [
+      {
+        "src": "/svg/logoapp/premierepro.svg",
+        "alt": "premiere pro Logo"
+      },
+      {
+        "src": "/svg/logoapp/capcut.svg",
+        "alt": "capcut Logo"
+      }
+    ]
+  },
+  {
+    "image": {
+      "src": "/images/project/anggagaluh.jpg",
+      "alt": "anggagaluh"
+    },
+    "link": "https://www.youtube.com/watch?v=wXPRiJeg_vM",
+    "title": "Angga Galuh Prewedding Video",
+    "subtitle": "Visual Project • 2020",
+    "description": "A 2020 project making Angga and Galuh Prewedding video",
+    "logos": [
+      {
+        "src": "/svg/logoapp/premierepro.svg",
+        "alt": "premiere pro Logo"
+      },
+      {
+        "src": "/svg/logoapp/capcut.svg",
+        "alt": "capcut Logo"
+      }
+    ]
+  },
+  {
+    "image": {
+      "src": "/images/project/chordofdimension.jpg",
+      "alt": "chordofdimension"
+    },
+    "link": "https://www.instagram.com/p/B5Z8429nnRn/",
+    "title": "Chord of Dimension in Black Arnoly Festival",
+    "subtitle": "Visual Project • 2019",
+    "description": "A 2019 project making Chord of Dimension in Black Arnoly Festival video documentation concert",
+    "logos": [
+      {
+        "src": "/svg/logoapp/premierepro.svg",
+        "alt": "premiere pro Logo"
+      },
+      {
+        "src": "/svg/logoapp/capcut.svg",
+        "alt": "capcut Logo"
+      }
+    ]
+  },
+  {
+    "image": {
+      "src": "/images/project/divamaharani.jpg",
+      "alt": "divamaharani"
+    },
+    "link": "https://www.instagram.com/p/B6pVSkIH-YV/",
+    "title": "Diva Maharani Sweet Seventeen",
+    "subtitle": "Visual Project • 2019",
+    "description": "A 2019 project making Diva Maharani Sweet Seventeen video documentation birthday party",
+    "logos": [
+      {
+        "src": "/svg/logoapp/premierepro.svg",
+        "alt": "premiere pro Logo"
+      },
+      {
+        "src": "/svg/logoapp/capcut.svg",
+        "alt": "capcut Logo"
+      }
+    ]
+  },
+  {
+    "image": {
+      "src": "/images/project/lamigieo.jpg",
+      "alt": "lamigieo"
+    },
+    "link": "https://www.instagram.com/p/Bc_n5GDl1BN/",
+    "title": "Lamigi EO event in STPBI Denpasar",
+    "subtitle": "Visual Project • 2019",
+    "description": "A 2019 project making Lamigi EO event in STPBI Denpasar video documentation event",
+    "logos": [
+      {
+        "src": "/svg/logoapp/premierepro.svg",
+        "alt": "premiere pro Logo"
+      },
+      {
+        "src": "/svg/logoapp/capcut.svg",
+        "alt": "capcut Logo"
+      }
+    ]
+  },
+  {
+    "image": {
+      "src": "/images/project/onepackoneact.jpg",
+      "alt": "onepackoneact"
+    },
+    "link": "https://www.instagram.com/p/BcR6y1DlFoE/",
+    "title": "One Pack One Act Bali video competition",
+    "subtitle": "Visual Project • 2017",
+    "description": "A 2017 project making One Pack One Act Bali video competition",
+    "logos": [
+      {
+        "src": "/svg/logoapp/premierepro.svg",
+        "alt": "premiere pro Logo"
+      },
+      {
+        "src": "/svg/logoapp/capcut.svg",
+        "alt": "capcut Logo"
+      }
+    ]
+  },
+  {
+    "image": {
+      "src": "/images/project/sketchride.jpg",
+      "alt": "sketchride"
+    },
+    "link": "https://www.instagram.com/p/BrkAQADDBBF/",
+    "title": "Sketchride Project merch",
+    "subtitle": "Visual Project • 2018",
+    "description": "A 2018 project making Sketchride Project v.1 merch video",
+    "logos": [
+      {
+        "src": "/svg/logoapp/premierepro.svg",
+        "alt": "premiere pro Logo"
+      },
+      {
+        "src": "/svg/logoapp/capcut.svg",
+        "alt": "capcut Logo"
+      }
+    ]
+  },
+  {
+    "image": {
+      "src": "/images/project/galang.png",
+      "alt": "galangvolkswagen"
+    },
+    "link": "https://www.instagram.com/p/C57Zz5iPcbe/",
+    "title": "Galang's Volkswagen 1303",
+    "subtitle": "Visual Project • 2024",
+    "description": "A 2024 project making Galang's Volkswagen 1303 video documentation car after restoration",
+    "logos": [
+      {
+        "src": "/svg/logoapp/premierepro.svg",
+        "alt": "premiere pro Logo"
+      },
+      {
+        "src": "/svg/logoapp/capcut.svg",
+        "alt": "capcut Logo"
+      }
+    ]
+  },
+  {
+    "image": {
+      "src": "/images/project/gretta.png",
+      "alt": "bramazx"
+    },
+    "link": "https://www.instagram.com/p/CZeebZzoxrD/",
+    "title": "Brama's 'Gretta' Zx25R ",
+    "subtitle": "Visual Project • 2022",
+    "description": "A 2022 project making Brama's 'Gretta' Zx25R b-roll video",
+    "logos": [
+      {
+        "src": "/svg/logoapp/premierepro.svg",
+        "alt": "premiere pro Logo"
+      },
+      {
+        "src": "/svg/logoapp/capcut.svg",
+        "alt": "capcut Logo"
+      }
+    ]
+  }
+]

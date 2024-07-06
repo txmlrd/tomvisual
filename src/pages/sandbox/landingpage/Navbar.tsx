@@ -33,7 +33,7 @@ const Navbar = () => {
         className={
           navbar
             ? 'transition bg-transparent h-20 flex items-center custom-rounded-navbar font-poppins font-medium'
-            : 'transition bg-warna-hijaumuda h-20 flex items-center custom-rounded-navbar font-poppins font-medium'
+            : 'transition bg-warna-hijausedang h-20 flex items-center custom-rounded-navbar font-poppins font-medium'
         }
       >
         <ul className='w-full'>
@@ -48,7 +48,13 @@ const Navbar = () => {
             </li>
             <div className=' flex flex-row items-center space-x-11 '>
               <Link href='link'>
-                <li className='px-5 py-2 bg-warna-orange rounded-full ring-4 ring-orange-500 ring-opacity-20'>
+                <li
+                  className={
+                    navbar
+                      ? 'px-5 py-2 hover:bg-warna-hijaulebihmuda hover:text-warna-hijautua text-warna-hijaulebihmuda border border-warna-hijaulebihmuda  rounded-lg'
+                      : 'px-5 py-2 bg-warna-hijaulebihmuda shadow-custom-default hover:shadow-custom-hover  rounded-lg'
+                  }
+                >
                   Tom Visual
                 </li>
               </Link>
@@ -65,6 +71,11 @@ const Navbar = () => {
               <li>
                 <Link href='link' className='text-warna-hijaulebihmuda'>
                   About Me
+                </Link>
+              </li>
+              <li>
+                <Link href='link' className='text-warna-hijaulebihmuda'>
+                  FAQs
                 </Link>
               </li>
             </div>
