@@ -3,7 +3,7 @@ import React from 'react';
 function Aboutme() {
   return (
     <div className='flex flex-col items-center justify-center text-white  min-h-screen w-full'>
-      <div className='flex flex-col items-center justify-center mx-96 space-y-7'>
+      <div className=' flex flex-col items-center justify-center space-y-7'>
         <div className='z-0 absolute'>
           <Image
             src='/svg/gradientroundshape.svg'
@@ -13,10 +13,10 @@ function Aboutme() {
           />
         </div>
 
-        <h1 className='font-poly text-6xl text-warna-hijaulebihmuda'>
+        <h1 className='font-poly text-5xl md:text-6xl text-warna-hijaulebihmuda'>
           About Me
         </h1>
-        <h1 className='font-poppins text-center text-warna-hijaudesc font-light mx-52'>
+        <h1 className='font-poppins text-center text-warna-hijaudesc font-light mx-10 md:mx-96'>
           Hi! I'm <span className='font-bold'>Gung Adhi</span>, a Front-End
           Developer, Web Designer, and Videographer with extensive experience in
           tech and visual arts. I have a passion for creating functional and
@@ -24,118 +24,129 @@ function Aboutme() {
           creative design.
         </h1>
       </div>
-      <div className='lg:scale-100 scale-50 pt-10 pb-16 flex flex-row items-center justify-center space-x-20'>
-        <div className='flex-shrink-0'>
-          <Image
-            src='/svg/logoapp/vscode.svg'
-            alt='VS Code'
-            width={64}
-            height={64}
-            objectFit='contain'
-          />
-        </div>
-        <div className='flex-shrink-0'>
-          <Image
-            src='/svg/logoapp/postman.svg'
-            alt='Postman'
-            width={64}
-            height={64}
-            objectFit='contain'
-          />
-        </div>
-        <div className='flex-shrink-0'>
-          <Image
-            src='/svg/logoapp/git.svg'
-            alt='Git'
-            width={64}
-            height={64}
-            objectFit='contain'
-          />
-        </div>
-        <div className='flex-shrink-0'>
-          <Image
-            src='/svg/logoapp/react.svg'
-            alt='React'
-            width={64}
-            height={64}
-            objectFit='contain'
-          />
-        </div>
-        <div className='flex-shrink-0'>
-          <Image
-            src='/svg/logoapp/next.svg'
-            alt='Next.js'
-            width={64}
-            height={64}
-            objectFit='contain'
-          />
-        </div>
-        <div className='flex-shrink-0'>
-          <Image
-            src='/svg/logoapp/tailwind.svg'
-            alt='Tailwind CSS'
-            width={64}
-            height={64}
-            objectFit='contain'
-          />
-        </div>
-        <div className='flex-shrink-0'>
-          <Image
-            src='/svg/logoapp/figma.svg'
-            alt='Tailwind CSS'
-            width={64}
-            height={64}
-            objectFit='contain'
-          />
-        </div>
-        <div className='flex-shrink-0'>
-          <Image
-            src='/svg/logoapp/premierepro.svg'
-            alt='Premiere Pro'
-            width={64}
-            height={64}
-            objectFit='contain'
-          />
-        </div>
-        <div className='flex-shrink-0'>
-          <Image
-            src='/svg/logoapp/aftereffect.svg'
-            alt='After Effects'
-            width={64}
-            height={64}
-            objectFit='contain'
-          />
-        </div>
-        <div className='flex-shrink-0'>
-          <Image
-            src='/svg/logoapp/ilustrator.svg'
-            alt='Illustrator'
-            width={64}
-            height={64}
-            objectFit='contain'
-          />
-        </div>
-        <div className='flex-shrink-0'>
-          <Image
-            src='/svg/logoapp/lightroom.svg'
-            alt='Lightroom'
-            width={64}
-            height={64}
-            objectFit='contain'
-          />
-        </div>
-        <div className='flex-shrink-0'>
-          <Image
-            src='/svg/logoapp/capcut.svg'
-            alt='Capcut'
-            width={64}
-            height={64}
-            objectFit='contain'
-          />
+      <div className='pt-10 pb-16 flex items-center justify-center'>
+        <div className=' md:scale-100 scale-90 grid grid-cols-6 lg:grid-cols-7 gap-5 md:gap-10'>
+          <div className='flex-shrink-0'>
+            <Image
+              src='/svg/logoapp/vscode.svg'
+              alt='VS Code'
+              width={64}
+              height={64}
+              objectFit='contain'
+            />
+          </div>
+          <div className='flex-shrink-0'>
+            <Image
+              src='/svg/logoapp/postman.svg'
+              alt='Postman'
+              width={64}
+              height={64}
+              objectFit='contain'
+            />
+          </div>
+          <div className='flex-shrink-0'>
+            <Image
+              src='/svg/logoapp/git.svg'
+              alt='Git'
+              width={64}
+              height={64}
+              objectFit='contain'
+            />
+          </div>
+          <div className='flex-shrink-0'>
+            <Image
+              src='/svg/logoapp/react.svg'
+              alt='React'
+              width={64}
+              height={64}
+              objectFit='contain'
+            />
+          </div>
+          <div className='flex-shrink-0'>
+            <Image
+              src='/svg/logoapp/next.svg'
+              alt='Next.js'
+              width={64}
+              height={64}
+              objectFit='contain'
+            />
+          </div>
+          <div className='flex-shrink-0'>
+            <Image
+              src='/svg/logoapp/tailwind.svg'
+              alt='Tailwind CSS'
+              width={64}
+              height={64}
+              objectFit='contain'
+            />
+          </div>
+          <div className='flex-shrink-0'>
+            <Image
+              src='/svg/logoapp/nextauth.svg'
+              alt='Next Auth'
+              width={64}
+              height={64}
+              objectFit='contain'
+            />
+          </div>
+          <div className='flex-shrink-0'>
+            <Image
+              src='/svg/logoapp/figma.svg'
+              alt='Figma'
+              width={64}
+              height={64}
+              objectFit='contain'
+            />
+          </div>
+          <div className='flex-shrink-0'>
+            <Image
+              src='/svg/logoapp/premierepro.svg'
+              alt='Premiere Pro'
+              width={64}
+              height={64}
+              objectFit='contain'
+            />
+          </div>
+          <div className='flex-shrink-0'>
+            <Image
+              src='/svg/logoapp/aftereffect.svg'
+              alt='After Effects'
+              width={64}
+              height={64}
+              objectFit='contain'
+            />
+          </div>
+          <div className='flex-shrink-0'>
+            <Image
+              src='/svg/logoapp/ilustrator.svg'
+              alt='Illustrator'
+              width={64}
+              height={64}
+              objectFit='contain'
+            />
+          </div>
+          <div className='flex-shrink-0'>
+            <Image
+              src='/svg/logoapp/lightroom.svg'
+              alt='Lightroom'
+              width={64}
+              height={64}
+              objectFit='contain'
+            />
+          </div>
+          <div className='flex-shrink-0'>
+            <Image
+              src='/svg/logoapp/capcut.svg'
+              alt='Capcut'
+              width={64}
+              height={64}
+              objectFit='contain'
+            />
+          </div>
         </div>
       </div>
 
-      <div className='items-start flex flex-row  space-x-10'>
+      <div className=' md:items-start items-center justify-center flex md:flex-row flex-col md:space-x-10 md:space-y-0 space-y-10 mx-5'>
         <div className=' flex flex-col justify-center items-center space-y-12'>
           <h1 className='font-poly text-5xl text-warna-hijaulebihmuda'>
             Education

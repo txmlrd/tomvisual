@@ -187,6 +187,27 @@
     transform: scale(2);
     transform-origin: center;
   }
+  .underline-animation {
+    position: relative;
+    text-decoration: none;
+    color: white; /* Set your text color */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+
+  .underline-animation::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust as needed */
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #cfee9e; /* Adjust to your desired underline color */
+    transition: width 0.3s ease; /* Smooth width transition */
+  }
+
+  .underline-animation:hover::before {
+    width: 100%; /* Full width on hover */
+  }
 }
 
 @layer utilities {

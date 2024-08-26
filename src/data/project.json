@@ -1,6 +1,70 @@
 [
   {
     "image": {
+      "src": "/images/project/ads-forwardin-test-case.png",
+      "alt": "ADS TEST CASE"
+    },
+    "link": "https://ads-forwardin-test-case.vercel.app/",
+    "title": "ADS Digital Partner Intern Test Case",
+    "subtitle": "Technology Project • 2024",
+    "description": "ADS Digital Partner Intern Test Case using Next.js and Tailwind CSS and NextATUH Credential",
+    "logos": [
+      {
+        "src": "/svg/logoapp/next.svg",
+        "alt": "Next.js Logo"
+      },
+      {
+        "src": "/svg/logoapp/tailwind.svg",
+        "alt": "Tailwind CSS Logo"
+      },
+      {
+        "src": "/svg/logoapp/nextauth.svg",
+        "alt": "NextAuth Logo"
+      }
+    ]
+  },
+  {
+    "image": {
+      "src": "/images/project/aksamedia-intern-tech-case.png",
+      "alt": "Aksamedia Intern Tech Case"
+    },
+    "link": "https://aksamedia-technical-test.vercel.app/",
+    "title": "Aksamedia Intern Tech Case",
+    "subtitle": "Technology Project • 2024",
+    "description": "Aksamedia Intern Tech Case using Next.js and Tailwind CSS, with local storage data, pagination, and search filter",
+    "logos": [
+      {
+        "src": "/svg/logoapp/next.svg",
+        "alt": "Next.js Logo"
+      },
+      {
+        "src": "/svg/logoapp/tailwind.svg",
+        "alt": "Tailwind CSS Logo"
+      }
+    ]
+  },
+  {
+    "image": {
+      "src": "/images/project/vonksdesign.png",
+      "alt": "Vonk's Design"
+    },
+    "link": "https://vonksdesign.vercel.app/",
+    "title": "Vonk's Design",
+    "subtitle": "Technology Project • 2024",
+    "description": "Design and Architecture Static Portofolio Website",
+    "logos": [
+      {
+        "src": "/svg/logoapp/next.svg",
+        "alt": "Next.js Logo"
+      },
+      {
+        "src": "/svg/logoapp/tailwind.svg",
+        "alt": "Tailwind CSS Logo"
+      }
+    ]
+  },
+  {
+    "image": {
       "src": "/images/project/starter.png",
       "alt": "Tom Visual"
     },
