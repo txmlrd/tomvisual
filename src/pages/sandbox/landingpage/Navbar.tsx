@@ -9,6 +9,9 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ scrollTo }) => {
+  const handleScrollTo = (id: string) => {
+    scrollTo(id);
+  };
   const [navbar, setNavbar] = React.useState(false);
 
   const scrollHeader = () => {
@@ -83,20 +86,26 @@ const Navbar: React.FC<NavbarProps> = ({ scrollTo }) => {
                 </button>
               </li>
               <li>
-                <Link href='link' className='text-warna-hijaulebihmuda'>
+                <button
+                  onClick={() => handleScrollTo('contact')}
+                  className='text-warna-hijaulebihmuda'
+                >
                   Contact
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href='link' className='text-warna-hijaulebihmuda'>
+                <button
+                  onClick={() => handleScrollTo('aboutme')}
+                  className='text-warna-hijaulebihmuda'
+                >
                   About Me
-                </Link>
+                </button>
               </li>
-              <li>
+              {/* <li>
                 <Link href='link' className='text-warna-hijaulebihmuda'>
                   FAQs
                 </Link>
-              </li>
+              </li> */}
             </div>
           </div>
 

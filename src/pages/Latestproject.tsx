@@ -5,7 +5,22 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-function ProjectCard({ project }: { project: any }) {
+type Project = {
+  link: string;
+  image: {
+    src: string;
+    alt: string;
+  };
+  title: string;
+  subtitle: string;
+  description: string;
+  logos: {
+    src: string;
+    alt: string;
+  }[];
+};
+
+function ProjectCard({ project }: { project: Project }) {
   const handleClick = () => {
     window.open(project.link, '_blank');
   };
@@ -38,15 +53,17 @@ function ProjectCard({ project }: { project: any }) {
           {project.description}
         </p>
         <div className='flex flex-wrap justify-center space-x-2'>
-          {project.logos.map((logo: any, index: any) => (
-            <Image
-              key={index}
-              src={logo.src}
-              alt={logo.alt}
-              width={23.5}
-              height={23.5}
-            />
-          ))}
+          {project.logos.map(
+            (logo: { src: string; alt: string }, index: number) => (
+              <Image
+                key={index}
+                src={logo.src}
+                alt={logo.alt}
+                width={23.5}
+                height={23.5}
+              />
+            ),
+          )}
         </div>
       </div>
     </div>

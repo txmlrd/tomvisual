@@ -4,12 +4,15 @@ import React from 'react';
 function Outro() {
   return (
     <div className=' min-h-screen w-full grid grid-row-12 grid-flow-dense'>
-      <div className=' flex flex-col justify-center items-start md:px-36 space-y-6 md:w-full md:h-full md:row-span-11 '>
+      <div className=' flex flex-col justify-center items-center md:px-36 space-y-6 md:w-full md:h-full md:row-span-11 '>
         <div className=' w-full px-5 flex flex-col my-36 space-y-4'>
-          <div>
+          <div className=''>
             <h1 className='font-poppins font-semibold text-warna-hijaulebihmuda text-4xl md:text-6xl leading-normal'>
-              Turn your imagination <br />
-              into reality<span className='animate-blink'>.</span>
+              Turn your imagination into <br />
+              <span className=' bg-white text-warna-hijaumuda mt-5'>
+                reality
+                <span className='animate-blink text-warna-hijaumuda '>.</span>
+              </span>
             </h1>
           </div>
 

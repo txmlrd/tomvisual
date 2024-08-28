@@ -19,7 +19,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   imageUrl,
   linkUrl,
   linkText,
-  buttonText,
 }) => {
   return (
     <CardContainer className='inter-var'>

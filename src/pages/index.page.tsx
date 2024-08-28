@@ -1,14 +1,11 @@
 import Image from 'next/image';
 import * as React from 'react';
 
-import firebaseSDK from '@/lib/firebaseConfig';
-
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 import { FlipWords } from '@/components/ui/flip-words';
 
 import Aboutme from '@/pages/Aboutme';
-import Hai from '@/pages/Hai';
 import Latestproject from '@/pages/Latestproject';
 import Outro from '@/pages/Outro';
 import Project from '@/pages/Project';
@@ -16,7 +13,6 @@ import Footer from '@/pages/sandbox/landingpage/Footer';
 import Navbar from '@/pages/sandbox/landingpage/Navbar';
 
 export default function HomePage() {
-  console.log(firebaseSDK);
   const words = ['Gung Adhi.', 'Tom Visual.'];
   const downloadPDF = () => {
     const pdfurl = '/download/cv.pdf';
@@ -92,14 +88,20 @@ export default function HomePage() {
               />
             </div>
           </div>
-          <Aboutme />
-          <a id='project'>
-            <Project />
+          <a id='aboutme'>
+            {' '}
+            <Aboutme />
           </a>
-          <Hai />
-          <Latestproject />
+          <Project />
+
+          <a id='project'>
+            <Latestproject />
+          </a>
+
           {/* <Testpages /> */}
-          <Outro />
+          <a id='contact'>
+            <Outro />
+          </a>
         </div>
       </main>
       <Footer />
