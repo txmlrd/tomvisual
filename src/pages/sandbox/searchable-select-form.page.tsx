@@ -4,7 +4,6 @@ import { FormProvider, useForm } from 'react-hook-form';
 import logger from '@/lib/logger';
 
 import Button from '@/components/buttons/Button';
-import ServerSelectInput from '@/components/forms/ServerSelectInput';
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 
@@ -45,15 +44,6 @@ export default function FormSandbox() {
               onSubmit={handleSubmit(onSubmit)}
               className='max-w-sm space-y-3'
             >
-              <ServerSelectInput
-                route='/select-options'
-                id='select'
-                label='Server Select Input'
-                helperText='Data fetched from the server for about 2 seconds'
-                placeholder='Select something'
-                validation={{ required: 'Select Input must be filled' }}
-              />
-
               <div className='flex flex-wrap gap-4'>
                 <Button type='submit'>Submit</Button>
               </div>

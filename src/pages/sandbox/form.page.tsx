@@ -11,7 +11,6 @@ import DropzoneInput from '@/components/forms/DropzoneInput';
 import Input from '@/components/forms/Input';
 import PasswordInput from '@/components/forms/PasswordInput';
 import Radio from '@/components/forms/Radio';
-import SearchableSelectInput from '@/components/forms/SearchableSelectInput';
 import TextArea from '@/components/forms/TextArea';
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
@@ -74,19 +73,7 @@ export default function FormSandbox() {
                   </button>
                 }
               />
-              <SearchableSelectInput
-                id='selectinput'
-                label='Select Input'
-                placeholder='Select something'
-                options={[
-                  { value: 'hi', label: 'hi' },
-                  {
-                    label: 'option 2',
-                    value: 'option2',
-                  },
-                ]}
-                validation={{ required: 'Select Input must be filled' }}
-              />
+
               <Input
                 id='price'
                 label='Price'
