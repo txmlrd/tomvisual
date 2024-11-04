@@ -1,7 +1,24 @@
 import Image from 'next/image';
 import React from 'react';
 
+import useFetchProjectType from '@/hooks/useFetchProjectType';
+
+import Error from '@/components/Error';
+import Loading from '@/components/Loading';
+import ProjectTypeCard from '@/components/ProjectTypeCard';
+
+import { ProjectsType } from '@/types';
+
 function Project() {
+  const { data, error, isLoading } = useFetchProjectType();
+  console.log(data);
+
+  if (isLoading) {
+    return <Loading />;
+  }
+  if (error) {
+    return <Error name='Project Type' />;
+  }
   return (
     <div className=' flex flex-col items-center justify-center text-white min-h-screen px-4 py-20'>
       <div className='mb-16 flex flex-col items-center justify-center xl:mx-32 space-y-7'>
@@ -27,7 +44,7 @@ function Project() {
       {/* project card */}
       <div className='lg:space-x-16 space-x-0 lg:space-y-0 flex flex-col lg:flex-row space-y-16'>
         {/* Technology Card */}
-        <div className='transition transform hover:scale-105 hover:rotate-1 duration-300 ease-in-out shadow-custom-default hover:shadow-custom-hover space-y-12 flex flex-col border rounded-lg bg-gradient-to-tl from-warna-hijautua to-warna-hijausedang border-warna-hijaulebihmuda p-6 w-full max-w-sm'>
+        {/* <div className='transition transform hover:scale-105 hover:rotate-1 duration-300 ease-in-out shadow-custom-default hover:shadow-custom-hover space-y-12 flex flex-col border rounded-lg bg-gradient-to-tl from-warna-hijautua to-warna-hijausedang border-warna-hijaulebihmuda p-6 w-full max-w-sm'>
           <Image
             src='/svg/project/technology.svg'
             alt='Technology'
@@ -47,29 +64,11 @@ function Project() {
               user-friendly and visually appealing digital experiences.
             </p>
           </div>
-        </div>
+        </div> */}
 
         {/* Visual Card */}
-        <div className='transition transform hover:scale-105 hover:rotate-1 duration-300 ease-in-out shadow-custom-default hover:shadow-custom-hover space-y-12 flex flex-col border rounded-lg bg-gradient-to-tl from-warna-hijautua to-warna-hijausedang border-warna-hijaulebihmuda p-6 w-full max-w-sm'>
-          <Image
-            src='/svg/project/visual.svg'
-            alt='Visual'
-            layout='intrinsic'
-            width={150}
-            height={150}
-          />
-          <div className='flex flex-col space-y-3'>
-            <h3 className='font-poppins font-semibold text-3xl text-warna-hijaulebihmuda'>
-              Visual
-            </h3>
-            <p className='tracking-wider font-poppins font-thin text-warna-hijaudesc'>
-              Under my freelance brand{' '}
-              <span className='font-semibold'>Tom Visual</span>, I specialize in
-              photography and videography, crafting compelling visual narratives
-              to elevate brand identities and capture memorable moments.
-            </p>
-          </div>
-        </div>
+
+        <ProjectTypeCard items={data as unknown as ProjectsType[]} />
       </div>
     </div>
   );

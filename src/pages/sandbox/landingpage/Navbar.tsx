@@ -36,7 +36,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrollTo }) => {
     <div
       className={
         navbar
-          ? 'sticky top-0 z-50 bg-transparent'
+          ? 'sticky top-0 z-50 backdrop-blur-md shadow-md'
           : 'sticky top-0 z-50 bg-warna-hijautua'
       }
     >

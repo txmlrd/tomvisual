@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import * as React from 'react';
 
@@ -88,20 +89,18 @@ export default function HomePage() {
               />
             </div>
           </div>
-          <a id='aboutme'>
-            {' '}
+          <div id='aboutme'>
             <Aboutme />
-          </a>
+          </div>
           <Project />
 
-          <a id='project'>
+          <div id='project'>
             <Latestproject />
-          </a>
+          </div>
 
-          {/* <Testpages /> */}
-          <a id='contact'>
+          <div id='contact'>
             <Outro />
-          </a>
+          </div>
         </div>
       </main>
       <Footer />

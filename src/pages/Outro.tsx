@@ -8,7 +8,8 @@ function Outro() {
         <div className=' w-full px-5 flex flex-col my-36 space-y-4'>
           <div className=''>
             <h1 className='font-poppins font-semibold text-warna-hijaulebihmuda text-4xl md:text-6xl leading-normal'>
-              Turn your imagination into <br />
+              <span className='rotate-180'>Turn</span> your imagination into{' '}
+              <br />
               <span className=' bg-white text-warna-hijaumuda mt-5'>
                 reality
                 <span className='animate-blink text-warna-hijaumuda '>.</span>
