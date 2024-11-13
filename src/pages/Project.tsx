@@ -11,7 +11,6 @@ import { ProjectsType } from '@/types';
 
 function Project() {
   const { data, error, isLoading } = useFetchProjectType();
-  console.log(data);
 
   if (isLoading) {
     return <Loading />;
