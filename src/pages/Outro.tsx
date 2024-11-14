@@ -7,14 +7,14 @@ function Outro() {
       <div className=' flex flex-col justify-center items-center md:px-36 space-y-6 md:w-full md:h-full md:row-span-11 '>
         <div className=' w-full px-5 flex flex-col my-36 space-y-4'>
           <div className=''>
-            <h1 className='font-poppins font-semibold text-warna-hijaulebihmuda text-4xl md:text-6xl leading-normal'>
-              <span className='rotate-180'>Turn</span> your imagination into{' '}
-              <br />
-              <span className=' bg-white text-warna-hijaumuda mt-5'>
+            <div className='font-poppins font-semibold text-warna-hijaulebihmuda text-4xl md:text-6xl flex flex-col'>
+              <h1>Turn your imagination into </h1>
+
+              <h1 className=' bg-white text-warna-hijaumuda mt-5 h-fit w-fit'>
                 reality
                 <span className='animate-blink text-warna-hijaumuda '>.</span>
-              </span>
-            </h1>
+              </h1>
+            </div>
           </div>
 
           <a

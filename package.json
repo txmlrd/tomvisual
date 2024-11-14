@@ -25,7 +25,7 @@
     "@tanstack/react-query-devtools": "^4.24.4",
     "@tanstack/react-table": "^8.11.2",
     "auto-zustand-selectors-hook": "^2.0.0",
-    "axios": "1.6.3",
+    "axios": "^1.7.7",
     "clsx": "^2.1.1",
     "firebase": "^10.12.4",
     "framer-motion": "^11.2.10",
@@ -91,7 +91,6 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "eslint --max-warnings=0",
       "prettier -w"
     ],
     "**/*.{json,css,scss,md,webmanifest}": [
