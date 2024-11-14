@@ -3,7 +3,11 @@ import React from 'react';
 
 import { ProjectsType } from '@/types';
 
-const ProjectTypeCard = ({ items }: { items: ProjectsType[] }) => {
+interface ProjectTypeProps {
+  items: ProjectsType[];
+}
+
+const ProjectTypeCard: React.FC<ProjectTypeProps> = ({ items }) => {
   return (
     <>
       {items.map((item, index) => (

@@ -1,6 +1,23 @@
 import Image from 'next/image';
 import React from 'react';
-function Aboutme() {
+
+import Error from '@/components/Error';
+import Loading from '@/components/Loading';
+
+import { Media } from '@/types';
+interface AboutmeProps {
+  items: Media[];
+  isLoading: boolean;
+  error: boolean;
+}
+
+const Aboutme: React.FC<AboutmeProps> = ({ items, isLoading, error }) => {
+  if (isLoading) {
+    return <Loading />;
+  }
+  if (error) {
+    return <Error name='Project Type' />;
+  }
   return (
     <div className='flex flex-col items-center justify-center text-white  min-h-screen w-full'>
       <div className=' flex flex-col items-center justify-center space-y-7'>
@@ -25,124 +42,22 @@ function Aboutme() {
         </h1>
       </div>
       <div className='pt-10 pb-16 flex items-center justify-center'>
-        <div className=' md:scale-100 scale-90 grid grid-cols-6 lg:grid-cols-7 gap-5 md:gap-10'>
-          <div className='flex-shrink-0'>
-            <Image
-              src='/svg/logoapp/vscode.svg'
-              alt='VS Code'
-              width={64}
-              height={64}
-              objectFit='contain'
-            />
-          </div>
-          <div className='flex-shrink-0'>
-            <Image
-              src='/svg/logoapp/postman.svg'
-              alt='Postman'
-              width={64}
-              height={64}
-              objectFit='contain'
-            />
-          </div>
-          <div className='flex-shrink-0'>
-            <Image
-              src='/svg/logoapp/git.svg'
-              alt='Git'
-              width={64}
-              height={64}
-              objectFit='contain'
-            />
-          </div>
-          <div className='flex-shrink-0'>
-            <Image
-              src='/svg/logoapp/react.svg'
-              alt='React'
-              width={64}
-              height={64}
-              objectFit='contain'
-            />
-          </div>
-          <div className='flex-shrink-0'>
-            <Image
-              src='/svg/logoapp/next.svg'
-              alt='Next.js'
-              width={64}
-              height={64}
-              objectFit='contain'
-            />
-          </div>
-          <div className='flex-shrink-0'>
-            <Image
-              src='/svg/logoapp/tailwind.svg'
-              alt='Tailwind CSS'
-              width={64}
-              height={64}
-              objectFit='contain'
-            />
-          </div>
-          <div className='flex-shrink-0'>
-            <Image
-              src='/svg/logoapp/nextauth.svg'
-              alt='Next Auth'
-              width={64}
-              height={64}
-              objectFit='contain'
-            />
-          </div>
-          <div className='flex-shrink-0'>
-            <Image
-              src='/svg/logoapp/figma.svg'
-              alt='Figma'
-              width={64}
-              height={64}
-              objectFit='contain'
-            />
-          </div>
-          <div className='flex-shrink-0'>
-            <Image
-              src='/svg/logoapp/premierepro.svg'
-              alt='Premiere Pro'
-              width={64}
-              height={64}
-              objectFit='contain'
-            />
-          </div>
-          <div className='flex-shrink-0'>
-            <Image
-              src='/svg/logoapp/aftereffect.svg'
-              alt='After Effects'
-              width={64}
-              height={64}
-              objectFit='contain'
-            />
-          </div>
-          <div className='flex-shrink-0'>
-            <Image
-              src='/svg/logoapp/ilustrator.svg'
-              alt='Illustrator'
-              width={64}
-              height={64}
-              objectFit='contain'
-            />
-          </div>
-          <div className='flex-shrink-0'>
-            <Image
-              src='/svg/logoapp/lightroom.svg'
-              alt='Lightroom'
-              width={64}
-              height={64}
-              objectFit='contain'
-            />
-          </div>
-          <div className='flex-shrink-0'>
-            <Image
-              src='/svg/logoapp/capcut.svg'
-              alt='Capcut'
-              width={64}
-              height={64}
-              objectFit='contain'
-            />
-          </div>
+        <div className=' md:scale-100 scale-90 flex flex-row gap-5'>
+          {items.map(
+            (item, index) =>
+              item.type === 'logo' && (
+                <div key={index} className=''>
+                  <Image
+                    key={index}
+                    src={`${process.env.NEXT_PUBLIC_APP_URL}${item.url}`}
+                    alt='VS Code'
+                    width={64}
+                    height={64}
+                    objectFit='contain'
+                  />
+                </div>
+              ),
+          )}
         </div>
       </div>
 
@@ -250,6 +165,6 @@ function Aboutme() {
       </div>
     </div>
   );
-}
+};
 
 export default Aboutme;

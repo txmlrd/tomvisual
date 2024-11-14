@@ -2,18 +2,19 @@
 import Image from 'next/image';
 import * as React from 'react';
 
+import useFetchLogo from '@/hooks/useFetchLogo';
+
 import Layout from '@/components/layout/Layout';
-import Seo from '@/components/Seo';
 import { FlipWords } from '@/components/ui/flip-words';
 
 import Aboutme from '@/pages/Aboutme';
 import Latestproject from '@/pages/Latestproject';
 import Outro from '@/pages/Outro';
 import Project from '@/pages/Project';
-import Footer from '@/pages/sandbox/landingpage/Footer';
-import Navbar from '@/pages/sandbox/landingpage/Navbar';
 
 export default function HomePage() {
+  const { data, error, isLoading } = useFetchLogo();
+  console.log('data', data);
   const words = ['Gung Adhi.', 'Tom Visual.'];
   const downloadPDF = () => {
     const pdfurl = '/download/cv.pdf';
@@ -35,9 +36,7 @@ export default function HomePage() {
   };
 
   return (
-    <Layout>
-      <Seo templateTitle='Home' />
-      <Navbar scrollTo={scrollTo} />
+    <Layout seo='Home' scrollTo={scrollTo}>
       <main>
         <div className='flex flex-col items-center justify-center bg-gradient-to-b from-warna-hijautua via-black to-warna-hijautua min-h-screen '>
           <div className=' flex flex-col md:flex-row h-auto justify-center w-full items-center md:space-x-44'>
@@ -90,7 +89,11 @@ export default function HomePage() {
             </div>
           </div>
           <div id='aboutme'>
-            <Aboutme />
+            <Aboutme
+              items={data ?? []}
+              isLoading={isLoading}
+              error={error as boolean}
+            />
           </div>
           <Project />
 
@@ -103,7 +106,6 @@ export default function HomePage() {
           </div>
         </div>
       </main>
-      <Footer />
     </Layout>
   );
 }

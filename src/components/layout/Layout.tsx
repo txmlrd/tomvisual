@@ -1,10 +1,24 @@
 import * as React from 'react';
 
 import BaseDialog from '@/components/dialog/BaseDialog';
+import Seo from '@/components/Seo';
 
 import useDialogStore from '@/store/useDialogStore';
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+import Footer from '@/pages/sandbox/landingpage/Footer';
+import Navbar from '@/pages/sandbox/landingpage/Navbar';
+
+interface LayoutProps {
+  children: React.ReactNode;
+  seo: string;
+  scrollTo?: (id: string) => void;
+}
+
+const Layout: React.FC<LayoutProps> = ({
+  children,
+  seo,
+  scrollTo = () => {},
+}: LayoutProps) => {
   //#region  //*=========== Store ===========
   const open = useDialogStore.useOpen();
   const state = useDialogStore.useState();
@@ -14,6 +28,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div>
+      <Navbar scrollTo={scrollTo} />
+      <Seo templateTitle={seo} />
       {children}
       <BaseDialog
         onClose={handleClose}
@@ -21,6 +37,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         open={open}
         options={state}
       />
+      <Footer />
     </div>
   );
-}
+};
+export default Layout;

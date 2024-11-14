@@ -7,8 +7,6 @@ import Error from '@/components/Error';
 import Loading from '@/components/Loading';
 import ProjectTypeCard from '@/components/ProjectTypeCard';
 
-import { ProjectsType } from '@/types';
-
 function Project() {
   const { data, error, isLoading } = useFetchProjectType();
 
@@ -67,7 +65,7 @@ function Project() {
 
         {/* Visual Card */}
 
-        <ProjectTypeCard items={data as unknown as ProjectsType[]} />
+        <ProjectTypeCard items={data ?? []} />
       </div>
     </div>
   );
