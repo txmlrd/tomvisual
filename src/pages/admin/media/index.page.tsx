@@ -27,7 +27,7 @@ const Media = () => {
   const formatTitleCase = (text: string) => {
     return text
       .split(/[-_]/) // Pisahkan berdasarkan tanda "-"
-      .map((word: any) => word.charAt(0).toUpperCase() + word.slice(1)) // Ubah huruf pertama menjadi huruf besar
+      .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)) // Ubah huruf pertama menjadi huruf besar
       .join(' '); // Gabungkan kembali dengan spasi
   };
 

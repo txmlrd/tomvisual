@@ -1,21 +1,24 @@
-import { ChevronDown, FileText, Home, Settings } from 'lucide-react'; // Import all necessary icons
+import { ChevronDown, FileText, Home, Settings } from 'lucide-react';
+import { useRouter } from 'next/router'; // Import useRouter from next/router
 import React from 'react';
 
 import { DashboardMenuItems } from '@/lib/static';
 
 import Typography from '@/components/typography/Typography';
 
-// Mapping icon names to actual icon components
 const iconMapping = {
   Home: Home,
   Settings: Settings,
   FileText: FileText,
-  // Add more mappings as needed
 };
 
-const DashboardMenu = ({ onMenuClick }: { onMenuClick: any }) => {
+const DashboardMenu = ({
+  onMenuClick,
+}: {
+  onMenuClick: (url: string) => void;
+}) => {
+  const router = useRouter();
   const [openMenu, setOpenMenu] = React.useState(true);
-  console.log(openMenu);
   const handleOpenMenu = () => setOpenMenu(!openMenu);
 
   return (
@@ -48,21 +51,26 @@ const DashboardMenu = ({ onMenuClick }: { onMenuClick: any }) => {
           </div>
 
           <div
-            className={`flex overflow-hidden flex-col gap-5 transition-all duration-300 ease-in-out  ${
+            className={`flex overflow-hidden flex-col gap-5 transition-all duration-300 ease-in-out ${
               openMenu
                 ? 'opacity-100 pointer-events-auto max-h-[500px]'
                 : 'opacity-0 pointer-events-none max-h-0'
             }`}
           >
             {section.data.map((item, itemIndex) => {
-              // Dynamically render the icon based on the mapping
               const IconComponent =
                 iconMapping[item.icon as keyof typeof iconMapping] || Home;
+              const isActive = router.pathname === item.url; // Check if the path matches the current URL
+
               return (
                 <a
                   key={itemIndex}
                   onClick={() => onMenuClick(item.url)}
-                  className='flex cursor-pointer flex-row gap-3 justify-start items-center hover:bg-warna-hijausedang transition-all duration-300 ease-in-out px-5 py-3 rounded-xl'
+                  className={`flex cursor-pointer flex-row gap-3 justify-start items-center transition-all duration-300 ease-in-out px-5 py-3 rounded-xl ${
+                    isActive
+                      ? 'bg-warna-hijausedang'
+                      : 'hover:bg-warna-hijausedang'
+                  }`}
                 >
                   <div>
                     <IconComponent size={20} />
