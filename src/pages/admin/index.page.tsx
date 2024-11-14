@@ -1,13 +1,7 @@
 import React from 'react';
 
-import AdminLayout from '@/components/layout/admin/AdminLayout';
-
 const page = () => {
-  return (
-    <AdminLayout seo='Admin'>
-      <main className='text-white'>qswd</main>
-    </AdminLayout>
-  );
+  return <main className='text-white'>qswd</main>;
 };
 
 export default page;

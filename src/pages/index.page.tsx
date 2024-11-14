@@ -46,7 +46,7 @@ export default function HomePage() {
                 <div className='flex flex-col space-y-6'>
                   <div className='h-10 md:h-12 font-light md:text-5xl text-3xl'>
                     I'm
-                    <FlipWords words={words} className='font-bold' />
+                    <FlipWords words={words} className='font-bold text-white' />
                   </div>
                   <div className='text-lg text-warna-hijaudesc hidden md:block'>
                     This is my personal portofolio. I’m interested in Technology

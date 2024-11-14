@@ -19,7 +19,7 @@ const ProjectTypeCard: React.FC<ProjectTypeProps> = ({ items }) => {
               : index % 3 === 1
                 ? 'hover:-rotate-1'
                 : 'hover:rotate-1'
-          } hover:scale-105 duration-300 ease-in-out shadow-custom-default hover:shadow-custom-hover space-y-12 flex flex-col border rounded-lg bg-gradient-to-tl from-warna-hijautua to-warna-hijausedang border-warna-hijaulebihmuda p-6 w-full max-w-sm`}
+          } hover:scale-105 cursor-pointer duration-300 ease-in-out shadow-custom-default hover:shadow-custom-hover space-y-12 flex flex-col border rounded-lg bg-gradient-to-tl from-warna-hijautua to-warna-hijausedang border-warna-hijaulebihmuda p-6 w-full max-w-sm`}
         >
           <Image
             src='/svg/project/visual.svg'

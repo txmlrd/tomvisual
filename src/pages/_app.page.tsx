@@ -13,6 +13,7 @@ import '@/styles/globals.css';
 import api from '@/lib/axios';
 
 import DismissableToast from '@/components/DismissableToast';
+import AdminLayout from '@/components/layout/admin/AdminLayout';
 
 Router.events.on('routeChangeStart', nProgress.start);
 Router.events.on('routeChangeError', nProgress.done);
@@ -31,12 +32,26 @@ const queryClient = new QueryClient({
   },
 });
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps, router }: AppProps) {
+  // Periksa apakah path saat ini berada di bawah /admin
+  const isAdminRoute = router.pathname.startsWith('/admin');
+
+  // Fungsi getLayout untuk memungkinkan layout per halaman
+  const getLayout =
+    (Component as { getLayout?: (page: React.ReactNode) => React.ReactNode })
+      .getLayout || ((page: React.ReactNode) => page);
+
   return (
     <QueryClientProvider client={queryClient}>
       <div>
         <DismissableToast />
-        <Component {...pageProps} />
+        {isAdminRoute ? (
+          <AdminLayout seo='Admin'>
+            {getLayout(<Component {...pageProps} />)}
+          </AdminLayout>
+        ) : (
+          getLayout(<Component {...pageProps} />)
+        )}
       </div>
     </QueryClientProvider>
   );

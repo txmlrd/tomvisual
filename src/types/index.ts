@@ -7,6 +7,11 @@ interface Project_Type {
   name: string;
   description: string;
 }
+export type Route = (
+  name: string,
+  params?: { [key: string]: unknown },
+) => string;
+export type Routes = { [key: string]: { path: string } };
 
 export interface Media {
   id: number;
