@@ -2,17 +2,15 @@ import { useQuery } from '@tanstack/react-query';
 
 import HttpClient from '@/service/httpClient';
 
-import { ProjectsType } from '@/types';
+import { Media } from '@/types';
 
-const httpClient = new HttpClient<ProjectsType>('/type');
+const httpClient = new HttpClient<Media>('/medias');
 
-const useFetchProjectType = () => {
+const useFetchLogo = () => {
   const { data, error, isLoading } = useQuery({
-    queryKey: ['projects-type'],
+    queryKey: ['media'],
     queryFn: () => httpClient.getAll(),
   });
-
-  // console.log('data type', data);
   return {
     data: data?.data,
     error,
@@ -20,4 +18,4 @@ const useFetchProjectType = () => {
   };
 };
 
-export default useFetchProjectType;
+export default useFetchLogo;

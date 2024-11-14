@@ -6,79 +6,13 @@ import 'swiper/css/pagination';
 
 import useFetchProjects from '@/hooks/useFetchProjects';
 
-import Error from '@/components/Error';
-import Loading from '@/components/Loading';
-
-import { Projects } from '@/types';
-
-function ProjectCard({ project }: { project: Projects }) {
-  const { data, isLoading, error } = useFetchProjects();
-  if (isLoading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <Error name='FAQ' />;
-  }
-  console.log(data);
-  const handleClick = () => {
-    window.open(project.link, '_blank');
-  };
-
-  return (
-    <div
-      onClick={handleClick}
-      className='group hover:shadow-custom-hover hover:cursor-pointer duration-300 flex flex-col justify-center items-center space-y-6 border rounded-lg bg-gradient-to-tl from-warna-hijautua to-warna-hijausedang border-warna-hijaulebihmuda p-6 md:p-8 backdrop-blur-md max-w-xs md:max-w-md w-full'
-    >
-      <div className='overflow-hidden rounded-lg flex h-[247px] w-full'>
-        <img
-          src={`http://127.0.0.1/tom-visual/public/storage/${project.main_image}`}
-          alt={project.title}
-          width={1000}
-          height={1000}
-          className='object-cover w-full h-full group-hover:scale-105 transition-transform duration-300 ease-in-out'
-        />
-      </div>
-
-      <div className='flex flex-col space-y-2 md:space-y-3 text-center'>
-        <div>
-          <h1 className='text-xl md:text-2xl font-poppins font-semibold text-warna-hijaulebihmuda'>
-            {project.title}
-          </h1>
-          <h2 className='text-xs md:text-sm font-poppins font-light text-white'>
-            {project.project_type.name} • {project.year}
-          </h2>
-        </div>
-        <p className='text-sm md:text-md font-poppins font-light text-warna-hijaudesc'>
-          {project.content}
-        </p>
-        {/* <div className='flex flex-wrap justify-center space-x-2'>
-          {project.logos.map(
-            (logo: { src: string; alt: string }, index: number) => (
-              <Image
-                key={index}
-                src={logo.src}
-                alt={logo.alt}
-                width={23.5}
-                height={23.5}
-              />
-            ),
-          )}
-        </div> */}
-      </div>
-    </div>
-  );
-}
+import ProjectCard from '@/components/latest-project/ProjectCard';
 
 const ProjectList = () => {
   const [showAll, setShowAll] = useState(false);
   const { data, isLoading, error } = useFetchProjects();
   const displayedProjects = showAll ? data : data?.slice(0, 3);
-  if (isLoading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <Error name='FAQ' />;
-  }
+
   return (
     <div className='flex flex-col items-center justify-center text-white w-full min-h-screen px-4 md:px-6'>
       <div className='flex flex-col items-center justify-center mb-8 md:mb-16'>
@@ -107,7 +41,12 @@ const ProjectList = () => {
         }`}
       >
         {displayedProjects?.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+          <ProjectCard
+            key={index}
+            items={[project]}
+            isLoading={isLoading}
+            error={error as boolean}
+          />
         ))}
       </div>
       <button
