@@ -4,9 +4,6 @@ import { FetchResponse } from '@/types';
 
 const axiosInstance = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL,
-  // params: {
-  //   apikey: process.env.API_KEY,
-  // },
   headers: {
     'Content-Type': 'application/json',
   },
@@ -28,6 +25,12 @@ class HttpClient<T> {
   get = (id: number | string, config?: AxiosRequestConfig) => {
     return axiosInstance
       .get<{ data: T }>(`${this.endpoint}/${id}`, config)
+      .then((response) => response.data.data);
+  };
+
+  post = (data: T, config?: AxiosRequestConfig) => {
+    return axiosInstance
+      .post<{ data: T }>(this.endpoint, data, config)
       .then((response) => response.data.data);
   };
 }

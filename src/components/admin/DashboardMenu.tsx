@@ -23,14 +23,14 @@ const DashboardMenu = ({
 
   return (
     <div className='flex w-80 gap-3 flex-col py-10 px-10 text-white md:max-w-[460px]'>
-      <a
+      {/* <a
         href='/admin'
         className='flex px-5 py-3 rounded-xl hover:bg-warna-hijausedang transition-all duration-300 ease-in-out flex-row justify-between items-center cursor-pointer'
       >
         <Typography variant='h3' color='white'>
           Dashboard
         </Typography>
-      </a>
+      </a> */}
       {DashboardMenuItems.map((section, sectionIndex) => (
         <div className='flex flex-col gap-5' key={sectionIndex}>
           <div

@@ -25,7 +25,7 @@ const ProjectTypes = () => {
   }
 
   return (
-    <div className='overflow-x-auto  w-full p-4 bg-[#19191f] rounded-lg shadow-md'>
+    <div className='overflow-x-auto  w-full px-10 py-4 bg-[#19191f] rounded-lg shadow-md'>
       <Table className='min-w-full bg-[#19191f] text-white'>
         <TableCaption className='text-white p-4 text-right'>
           <button className='px-3 py-1 bg-green-500 text-white rounded-md hover:bg-green-600'>

@@ -29,14 +29,14 @@ interface Pivot {
 }
 
 export interface Projects {
-  id: number;
+  id?: number;
   title: string;
-  project_type: Project_Type;
+  project_type?: Project_Type;
   year: string;
   content: string;
-  media: Media[];
-  created_at: string;
-  updated_at: string;
+  media?: Media[];
+  created_at?: string;
+  updated_at?: string;
   url: string;
 }
 
