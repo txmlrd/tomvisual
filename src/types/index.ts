@@ -8,16 +8,15 @@ interface Project_Type {
 }
 
 export interface Projects {
+  description: string;
   id: number;
-  main_image: string;
-  title: string;
-  project_type: Project_Type;
-  year: string;
-  content: string;
-  created_at: string;
-  updated_at: string;
-  link: string;
+  logos: { src: string; alt: string }[];
+  image: { src: string; alt: string };
+  link : string;
+  subtitle : string;
+  title : string;
 }
+
 
 export interface ProjectsType {
   id: number;

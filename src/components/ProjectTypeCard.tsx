@@ -4,7 +4,6 @@ import React from 'react';
 import { ProjectsType } from '@/types';
 
 const ProjectTypeCard = ({ items }: { items: ProjectsType[] }) => {
-  console.log(items);
   return (
     <>
       {items.map((item, index) => (

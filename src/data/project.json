@@ -1,6 +1,79 @@
 [
   {
     "image": {
+      "src": "/images/project/ajoungnarl-mobile.png",
+      "alt": "Ajoungnarl"
+    },
+    "link": "https://www.ajoungnarl.web.id/",
+    "title": "Ajoungnarl Mobile Version",
+    "subtitle": "Technology Project • 2025",
+    "description": "Ajoungnarl Mobile Version is a personal blog mobile application built with Flutter and Firebase. Coming soon.",
+    "logos": [
+      {
+        "src": "/svg/logoapp/flutter.svg",
+        "alt": "Flutter Logo"
+      },
+
+      {
+        "src": "/svg/logoapp/firebase.svg",
+        "alt": "Firebase Logo"
+      }
+    ]
+  },
+  {
+    "image": {
+      "src": "/images/project/ajoungnarl.jpg",
+      "alt": "Ajoungnarl"
+    },
+    "link": "https://www.ajoungnarl.web.id/",
+    "title": "Ajoungnarl",
+    "subtitle": "Technology Project • 2025",
+    "description": "Ajoungnarl is a personal blog website built with React.js, Vite, Tailwind CSS and Firebase as a NoSQL database,  featuring a clean and modern design, responsive layout. Still in development progress.",
+    "logos": [
+      {
+        "src": "/svg/logoapp/vitejs.svg",
+        "alt": "Vite.js Logo"
+      },
+      {
+        "src": "/svg/logoapp/tailwind.svg",
+        "alt": "Tailwind CSS Logo"
+      },
+      {
+        "src": "/svg/logoapp/react.svg",
+        "alt": "React.js Logo"
+      },
+      {
+        "src": "/svg/logoapp/firebase.svg",
+        "alt": "React.js Logo"
+      }
+    ]
+  },
+  {
+    "image": {
+      "src": "/images/project/ptw-nr.jpg",
+      "alt": "PTW Generator NR"
+    },
+    "link": "https://ptw-generator.vercel.app/ptw",
+    "title": "Nusantara Regas PTW Generator",
+    "subtitle": "Technology Project • 2025",
+    "description": "Nusantara Regas PTW Generator is a Permit to Work (PTW) generator web application built with Next.js, Tailwind CSS. Simple app as my output for internship program at Nusantara Regas.",
+    "logos": [
+      {
+        "src": "/svg/logoapp/next.svg",
+        "alt": "Next.js Logo"
+      },
+      {
+        "src": "/svg/logoapp/tailwind.svg",
+        "alt": "Tailwind CSS Logo"
+      },
+      {
+        "src": "/svg/logoapp/react.svg",
+        "alt": "React.js Logo"
+      }
+    ]
+  },
+  {
+    "image": {
       "src": "/images/project/ads-forwardin-test-case.png",
       "alt": "ADS TEST CASE"
     },
@@ -48,7 +121,7 @@
       "src": "/images/project/vonksdesign.png",
       "alt": "Vonk's Design"
     },
-    "link": "https://vonksdesign.vercel.app/",
+    "link": "https://vonksdesign.com/",
     "title": "Vonk's Design",
     "subtitle": "Technology Project • 2024",
     "description": "Design and Architecture Static Portofolio Website",
@@ -68,7 +141,7 @@
       "src": "/images/project/starter.png",
       "alt": "Tom Visual"
     },
-    "link": "https://starteracademy.id/",
+    "link": "https://fe-starter-git-landing-new-txmlrds-projects.vercel.app/",
     "title": "Starter Academy",
     "subtitle": "Technology Project • 2023",
     "description": "Online Course website developing in Next.js and Tailwind CSS",

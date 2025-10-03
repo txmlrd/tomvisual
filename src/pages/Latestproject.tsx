@@ -4,22 +4,18 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import useFetchProjects from '@/hooks/useFetchProjects';
-
-import Error from '@/components/Error';
-import Loading from '@/components/Loading';
+import data from '@/data/project.json';
 
 import { Projects } from '@/types';
 
 function ProjectCard({ project }: { project: Projects }) {
-  const { data, isLoading, error } = useFetchProjects();
-  if (isLoading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <Error name='FAQ' />;
-  }
-  console.log(data);
+  // const { data, isLoading, error } = useFetchProjects();
+  // if (isLoading) {
+  //   return <Loading />;
+  // }
+  // if (error) {
+  //   return <Error name='FAQ' />;
+  // }
   const handleClick = () => {
     window.open(project.link, '_blank');
   };
@@ -31,8 +27,8 @@ function ProjectCard({ project }: { project: Projects }) {
     >
       <div className='overflow-hidden rounded-lg flex h-[247px] w-full'>
         <img
-          src={`http://127.0.0.1/tom-visual/public/storage/${project.main_image}`}
-          alt={project.title}
+          src={project.image.src}
+          alt={project.image.alt}
           width={1000}
           height={1000}
           className='object-cover w-full h-full group-hover:scale-105 transition-transform duration-300 ease-in-out'
@@ -45,13 +41,13 @@ function ProjectCard({ project }: { project: Projects }) {
             {project.title}
           </h1>
           <h2 className='text-xs md:text-sm font-poppins font-light text-white'>
-            {project.project_type.name} • {project.year}
+            {project.subtitle}
           </h2>
         </div>
         <p className='text-sm md:text-md font-poppins font-light text-warna-hijaudesc'>
-          {project.content}
+          {project.description}
         </p>
-        {/* <div className='flex flex-wrap justify-center space-x-2'>
+        <div className='flex flex-wrap justify-center space-x-2'>
           {project.logos.map(
             (logo: { src: string; alt: string }, index: number) => (
               <Image
@@ -63,7 +59,7 @@ function ProjectCard({ project }: { project: Projects }) {
               />
             ),
           )}
-        </div> */}
+        </div>
       </div>
     </div>
   );
@@ -71,14 +67,9 @@ function ProjectCard({ project }: { project: Projects }) {
 
 const ProjectList = () => {
   const [showAll, setShowAll] = useState(false);
-  const { data, isLoading, error } = useFetchProjects();
   const displayedProjects = showAll ? data : data?.slice(0, 3);
-  if (isLoading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <Error name='FAQ' />;
-  }
+  console.log(displayedProjects);
+
   return (
     <div className='flex flex-col items-center justify-center text-white w-full min-h-screen px-4 md:px-6'>
       <div className='flex flex-col items-center justify-center mb-8 md:mb-16'>
