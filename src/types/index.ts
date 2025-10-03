@@ -9,7 +9,6 @@ interface Project_Type {
 
 export interface Projects {
   description: string;
-  id: number;
   logos: { src: string; alt: string }[];
   image: { src: string; alt: string };
   link : string;

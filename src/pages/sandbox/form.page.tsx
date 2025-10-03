@@ -7,7 +7,6 @@ import logger from '@/lib/logger';
 import Button from '@/components/buttons/Button';
 import Checkbox from '@/components/forms/Checkbox';
 import DatePicker from '@/components/forms/DatePicker';
-import DropzoneInput from '@/components/forms/DropzoneInput';
 import Input from '@/components/forms/Input';
 import PasswordInput from '@/components/forms/PasswordInput';
 import Radio from '@/components/forms/Radio';
@@ -88,13 +87,7 @@ export default function FormSandbox() {
                 validation={{ required: 'Password must be filled' }}
                 placeholder='Enter your password'
               />
-              <DropzoneInput
-                id='photo'
-                label='Activity Photo'
-                validation={{ required: 'Photo must be filled' }}
-                accept={{ 'image/*': ['.png', '.jpg', '.jpeg'] }}
-                helperText='You can upload file with .png, .jpg, atau .jpeg extension.'
-              />
+
               <DatePicker
                 id='date'
                 label='Date'
