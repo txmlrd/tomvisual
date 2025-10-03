@@ -16,8 +16,8 @@ export function DropZoneMedia({ onFilesChange }: DropZoneMediaProps) {
     onDrop: (acceptedFiles) => {
       const file = acceptedFiles[0];
       if (file) {
-        setFilePreview(URL.createObjectURL(file)); // Create preview URL
-        onFilesChange(acceptedFiles); // Send file to parent
+        setFilePreview(URL.createObjectURL(file));
+        onFilesChange(acceptedFiles);
       }
     },
   });
